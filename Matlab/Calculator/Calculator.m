@@ -1,10 +1,10 @@
-function varargout = test1(varargin)
+function varargout = Calculator(varargin)
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @test1_OpeningFcn, ...
-                   'gui_OutputFcn',  @test1_OutputFcn, ...
+                   'gui_OpeningFcn', @Calculator_OpeningFcn, ...
+                   'gui_OutputFcn',  @Calculator_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -17,20 +17,20 @@ else
 end
 % End initialization code - DO NOT EDIT
 
-% --- Executes just before test1 is made visible.
-function test1_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before Calculator is made visible.
+function Calculator_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
-% Choose default command line output for test1
+% Choose default command line output for Calculator
 handles.output = hObject;
 % Update handles structure
 guidata(hObject, handles);
-% UIWAIT makes test1 wait for user response (see UIRESUME)
+% UIWAIT makes Calculator wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 global clear; global num1; global num2; global op; global isOP;
 clear = 0; num1 = 0; num2 = 0; op = 0; isOP = 0;
 
 % --- Outputs from this function are returned to the command line.
-function varargout = test1_OutputFcn(hObject, eventdata, handles) 
+function varargout = Calculator_OutputFcn(hObject, eventdata, handles) 
 % Get default command line output from handles structure
 varargout{1} = handles.output;
 
