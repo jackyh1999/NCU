@@ -1,1 +1,1 @@
-# ncu
+Some assignments and projects done during university
