@@ -1,0 +1,20 @@
+#define IDM_HELLO 2
+#define IDM_GOODBYE 3
+#define IDM_GETTEXT 4
+#define IDM_EXIT 5
+#define IDM_ABOUT 6
+#define IDB_MAIN 1
+
+IDB_MAIN BITMAP "bgbmp.bmp"
+
+FirstMenu MENU
+{
+ POPUP "PopUp"
+        {
+         MENUITEM "Say Hello",IDM_HELLO
+         MENUITEM "Say GoodBye", IDM_GOODBYE
+         MENUITEM SEPARATOR
+         MENUITEM "Exit",IDM_EXIT
+        }
+ MENUITEM "About", IDM_ABOUT
+}
